@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>景點導覽 | 霧峰旅遊宣傳網</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Website Materials/Image/logo.png" alt="霧峰旅遊 Logo" class="logo">
+                <span class="site-title">霧峰旅遊宣傳網</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">主頁</a></li>
+                <li><a href="about.html">網站介紹</a></li>
+                <li><a href="attractions.html" class="active">景點導覽</a></li>
+                <li><a href="activities.html">樂遊活動</a></li>
+                <li><a href="food.html">美食推薦</a></li>
+                <li><a href="timeline.html">時光走廊</a></li>
+                <li><a href="powerpoint.html">簡報欣賞</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 頁面標題 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>景點導覽</h1>
+            <p>Wufeng Attractions</p>
+        </div>
+    </section>
+
+    <!-- 景點列表 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="items-grid">
+                <!-- 景點項目 1 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/attractions 01.jpg" alt="霧峰林家花園">
+                    </div>
+                    <div class="item-content">
+                        <h3>林家花園宮保第園區</h3>
+                        <p class="item-date">國定古蹟 | 歷史建築</p>
+                        <p class="item-description" data-read-more="80">
+                            霧峰林家是台灣五大家族之一，其宅邸為台灣現存最完整的傳統建築群。園區包含宮保第、大花廳、萊園等，融合傳統建築與園林藝術，展現清代官宦家族的生活風貌。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-1')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 景點項目 2 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/光復新村.jfif" alt="光復新村">
+                    </div>
+                    <div class="item-content">
+                        <h3>光復新村</h3>
+                        <p class="item-date">文創聚落 | 眷村文化</p>
+                        <p class="item-description" data-read-more="80">
+                            台灣第一個新市鎮，保留完整的眷村風貌。近年轉型為文創基地，進駐許多特色店家、藝術工作室與咖啡廳，成為青年返鄉創業的熱門據點。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-2')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 景點項目 3 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/亞洲大學現代美術館.jpg" alt="亞洲大學現代美術館">
+                    </div>
+                    <div class="item-content">
+                        <h3>亞洲大學現代美術館</h3>
+                        <p class="item-date">建築藝術 | 文化展覽</p>
+                        <p class="item-description" data-read-more="80">
+                            由日本建築大師安藤忠雄設計，獨特的三角形幾何建築造型令人驚艷。館內定期展出國內外藝術作品，是台中地區重要的藝術文化場館。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-3')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 景點項目 4 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://travel.taichung.gov.tw/image/12586/1024x768" alt="921地震教育園區">
+                    </div>
+                    <div class="item-content">
+                        <h3>921地震教育園區</h3>
+                        <p class="item-date">教育園區 | 地質科學</p>
+                        <p class="item-description" data-read-more="80">
+                            保存 1999 年 921 大地震原址，完整呈現車籠埔斷層、校舍倒塌等震災遺址。透過互動展示與科學教育，讓民眾了解地震科學與防災知識。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-4')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 景點項目 5 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://travel.taichung.gov.tw/image/58386/1024x768" alt="民生路老街">
+                    </div>
+                    <div class="item-content">
+                        <h3>民主議政園區</h3>
+                        <p class="item-date">國會史蹟 | 民主教育園區</p>
+                        <p class="item-description" data-read-more="80">
+                            民主議政園區位於臺中霧峰，是臺灣珍貴的憲政與國會史蹟保存場域， 原址為「國會議事廳」及相關附屬建築。園區完整保留中央民意機關的運作空間， 包含議場、委員研究室、接待廳等公共議政設施，見證臺灣從威權走向民主的重要歷程。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-5')">了解更多</button>
+                    </div>
+                </div>
+        
+        
+
+            <!-- 景點項目 6 -->
+            <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/food03 酒莊.jfif" alt="霧峰農會酒莊">
+                    </div>
+                    <div class="item-content">
+                        <h3>霧峰農會酒莊</h3>
+                        <p class="item-date">特色伴手禮 | 在地釀造</p>
+                        <p class="item-description" data-read-more="80">
+                            以在地香米釀造的初霧、香米酒等產品聞名，酒莊提供導覽與品酒體驗。來到霧峰，不妨帶一瓶在地佳釀作為伴手禮，品味霧峰的土地風味。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-3')">了解更多</button>
+                    </div>
+                </div>
+            
+            <!-- 景點項目 7 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://dcm.s3.hicloud.net.tw/new/e_upload/excel/place/2019-05-14/8c081ce1-04c4-4bd9-96c8-1e39307a3655/85d429b0-5f2c-4313-97e7-afa55d67daec.jpg" alt="霧峰戰俘營紀念碑">
+                    </div>
+                    <div class="item-content">
+                        <h3>霧峰戰俘營紀念碑</h3>
+                        <p class="item-date"> 歷史記憶地景 | 二戰戰俘營址</p>
+                        <p class="item-description" data-read-more="80">
+                            霧峰戰俘營紀念碑原址為第二次世界大戰期間的「台中戰俘營」，是日軍在臺設立的多處戰俘營之一。 當時多名盟軍戰俘被押送至此，在困苦環境下從事農作、建設與重勞動，留下許多戰時歷史痕跡與人道故事。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-7')">了解更多</button>
+                    </div>
+                </div>
+
+            
+             <!-- 景點項目 8 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://www.taichung.gov.tw/media/832726/%E6%88%B0%E9%BC%93%E8%A1%A8%E6%BC%94%E7%82%BA%E6%B4%BB%E5%8B%95%E6%8F%AD%E9%96%8B%E5%BA%8F%E5%B9%95.jpg" alt="霧峰戰俘營紀念碑">
+                    </div>
+                    <div class="item-content">
+                        <h3>阿罩霧公園</h3>
+                        <p class="item-date"> 親子公園 | 落羽松秘境</p>
+                        <p class="item-description" data-read-more="80">
+                            阿罩霧公園位在霧峰市區要道旁，是結合休憩、遊憩與展演機能的親子公園。園內設置大型機器人花燈、 貓頭鷹意象裝置、手壓式汲水器、拱橋與大片草地，不論白天或夜晚都有不同風情。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-8')">了解更多</button>
+                    </div>
+                </div>
+      
+             <!-- 景點項目 9 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://www.wffa.org.tw/images/images/25a49e3dc8d55e1e8ba0e78d662dfdf0.jpg" alt="霧峰戰俘營紀念碑">
+                    </div>
+                    <div class="item-content">
+                        <h3>菇類產學文化館</h3>
+                        <p class="item-date"> 農業教育 | 蘑菇產業展示</p>
+                        <p class="item-description" data-read-more="80">
+                           菇類產學文化館由霧峰農會規劃設立，結合在地菇類產業、教學示範與科普展示， 是全台少數以「食用菇」為主題的專業教育場館。館內以互動式展區介紹菇類的生態、 栽培方式與產業應用，讓參觀者能以淺顯方式認識菇類從培養、孢子發展到生產的完整流程。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('attraction-9')">了解更多</button>
+                    </div>
+                </div>
+             </div>
+    </section>
+
+
+    <!-- Modal 彈窗 -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeDetailModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 詳細資訊內容（隱藏） -->
+    <div id="attraction-details" style="display: none;">
+        <div id="attraction-1" class="detail-content">
+            <br>
+           <div class="detail-category">
+            <h2>林家花園宮保第園區</h2>
+            <h1>　</h1>
+            <p>📍 國定古蹟 | 歷史建築</p>
+            </div>
+            <img src="Website Materials/Image/attractions 01.jpg" alt="霧峰林家花園" class="detail-image">
+            <div class="detail-text">
+                <h3>景點介紹</h3>
+                <p>霧峰林家是台灣五大家族之一，其宅邸為台灣現存最完整的傳統建築群。園區包含宮保第、大花廳、萊園等多處歷史建築，融合了傳統建築與園林藝術，展現清代官宦家族的生活風貌與文化底蘊。</p>
+                <p>宮保第建於清同治年間，是林家的主要住宅區，建築精美、雕樑畫棟，處處可見傳統工藝之美。大花廳則是林家招待賓客與舉辦宴會的場所，其戲台與精緻裝飾令人驚嘆。萊園為林家私人園林，仿江南園林風格建造，小橋流水、亭台樓閣，充滿詩意。</p>
+
+                <h3>參觀資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區民生路26號</p>
+                    <p><strong>⏰ 開放時間：</strong>週二至週日 09:00-17:00（週一休館）</p>
+                    <p><strong>🎫 門票：</strong>全票 250元，優待票 200元</p>
+                    <p><strong>🚌 交通：</strong>搭乘台中客運至霧峰站下車，步行約10分鐘</p>
+                    <p><strong>🌐 詳細介紹：</strong><a href="https://www.thelinfamily.org.tw/" target="_blank">點此前往</a></p>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.090684561677!2d120.69820807590388!3d24.063110876698296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b500669ad27%3A0xde45112ca7ecba5f!2zNDEz6Ie65Lit5biC6Zyn5bOw5Y2A5rCR55Sf6LevMjbomZ8!5e0!3m2!1szh-TW!2stw!4v1765004998622!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="attraction-2" class="detail-content">
+            <br>
+            <div class="detail-category">
+            <h2>光復新村</h2>
+            <h1>　</h1>
+            <p>📍 文創聚落 | 眷村文化</p>
+            </div>
+
+            <img src="Website Materials/Image/光復新村.jfif" alt="光復新村" class="detail-image">
+            <div class="detail-text">
+                <h3>景點介紹</h3>
+                <p>光復新村是台灣第一個新市鎮，建於 1956 年，保留了完整的眷村風貌。這裡的建築採用低密度、花園城市的設計理念，每戶都有獨立的庭院，綠樹成蔭、環境優美。</p>
+                <p>近年來，光復新村轉型為文創基地，進駐了許多特色店家、藝術工作室與咖啡廳，成為青年返鄉創業的熱門據點。漫步在充滿懷舊氛圍的街道上，可以感受到歷史與現代的完美結合，也能品味到各式創意商品與美食。</p>
+
+                <h3>參觀資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區和平路2-3號</p>
+                    <p><strong>⏰ 開放時間：</strong>全天開放（店家營業時間各異）</p>
+                    <p><strong>🎫 門票：</strong>免費參觀</p>
+                    <p><strong>🏪 特色店家：</strong>咖啡廳、手作工坊、藝術展覽空間等</p>
+                    <p><strong>🌐 詳細介紹：</strong><a href="https://travel.taichung.gov.tw/zh-tw/attractions/intro/962" target="_blank">點此前往</a></p>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.615300616456!2d120.69191757590364!3d24.04462747741614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b3b42d976d5%3A0x848d12faf16c5876!2zNDEz6Ie65Lit5biC6Zyn5bOw5Y2A5ZKM5bmz6LevMi0z6Jmf!5e0!3m2!1szh-TW!2stw!4v1765005199774!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="attraction-3" class="detail-content">
+            <br>
+            <div class="detail-category">
+            <h2>亞洲大學現代美術館</h2>
+            <h1>　</h1>
+            <p>📍 建築藝術 | 文化展覽</p>
+            </div>
+
+            <img src="Website Materials/Image/亞洲大學現代美術館.jpg" alt="亞洲大學現代美術館" class="detail-image">
+            <div class="detail-text">
+                <h3>景點介紹</h3>
+                <p>亞洲大學現代美術館由日本建築大師安藤忠雄設計，是他在台灣的第一座建築作品。美術館採用獨特的三角形幾何建築造型，運用清水混凝土與大面積玻璃，創造出極具震撼力的視覺效果。</p>
+                <p>館內展示空間寬敞明亮，定期展出國內外知名藝術家的作品，涵蓋繪畫、雕塑、裝置藝術等多種形式。美術館不僅是藝術愛好者的天堂，其建築本身也是攝影愛好者的熱門拍照景點。</p>
+
+                <h3>參觀資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區柳豐路500號</p>
+                    <p><strong>⏰ 開放時間：</strong>週二至週日 09:30-17:00（週一休館）</p>
+                    <p><strong>🎫 門票：</strong>全票 100元，學生票 50元</p>
+                    <p><strong>✨ 特色：</strong>安藤忠雄設計、三角形建築、定期藝術展覽</p>
+                    <p><strong>🌐 詳細介紹：</strong><a href="https://asiamodern.asia.edu.tw/" target="_blank">點此前往</a></p>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.54489158218!2d120.68335708560807!3d24.0471089218205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b17f89d4773%3A0x75195fab2281c37f!2z5Lqe5rSy5aSn5a246ZmE5bGs54--5Luj576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1765005259672!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="attraction-4" class="detail-content">
+            <br><div class="detail-category">
+            <h2>921地震教育園區</h2>
+            <h1>　</h1>
+            <p>📍 教育園區 | 地質科學</p>
+            </div>
+
+            <img src="https://travel.taichung.gov.tw/image/12586/1024x768" alt="921地震教育園區" class="detail-image">
+            <div class="detail-text">
+                <h3>景點介紹</h3>
+                <p>921地震教育園區保存了 1999 年 921 大地震的原址，完整呈現車籠埔斷層、校舍倒塌等震災遺址。園區透過互動展示與科學教育，讓民眾深入了解地震的成因、影響以及防災知識。</p>
+                <p>園區分為多個展館，包括車籠埔斷層保存館、地震工程教育館、影像館等，運用多媒體科技與實物展示，生動地呈現地震的威力與防災的重要性。這裡不僅是一處紀念場所，更是極具教育意義的學習空間。</p>
+
+                <h3>參觀資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區坑口里新生路192號</p>
+                    <p><strong>⏰ 開放時間：</strong>週二至週日 09:00-17:00（週一休館）</p>
+                    <p><strong>🎫 門票：</strong>全票 50元，優待票 30元</p>
+                    <p><strong>🏛️ 展館：</strong>車籠埔斷層保存館、地震工程教育館、影像館等</p>
+                    <p><strong>🌐 詳細介紹：</strong><a href="https://www.nmns.edu.tw/park_921/index.html" target="_blank">點此前往</a></p>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.54489158218!2d120.68335708560807!3d24.0471089218205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693ac6bbdcc543%3A0x732d62b3fdd5e662!2zOTIx5Zyw6ZyH5pWZ6IKy5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1765005293319!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="attraction-5" class="detail-content">
+    <br>
+    <div class="detail-category">
+        <h2>民主議政園區</h2>
+        <h1>　</h1>
+        <p>📍 國會史蹟 | 民主教育園區</p>
+    </div>
+
+    <img src="https://travel.taichung.gov.tw/image/58386/1024x768" alt="民主議政園區" class="detail-image">
+
+    <div class="detail-text">
+        <h3>景點介紹</h3>
+        <p>
+            民主議政園區位於臺中霧峰，是臺灣珍貴的憲政與國會史蹟保存場域，
+            原址為「國會議事廳」及相關附屬建築。園區完整保留中央民意機關的運作空間，
+            包含議場、委員研究室、接待廳等公共議政設施，見證臺灣從威權走向民主的重要歷程。
+        </p>
+        <p>
+            為推廣憲政教育與民主理念，園區透過常設展、導覽解說與教育活動，帶領民眾了解國會制度、
+            修憲歷程、民主發展與立法程序等議政運作方式。建築外觀融合時代特色與莊重氛圍，
+            走入園區，彷彿回到過去議政現場，體驗臺灣民主演進的步伐。
+        </p>
+
+        <h3>參觀資訊</h3>
+        <div class="info-card">
+            <p><strong>📍 地址：</strong>台中市霧峰區中正路738號</p>
+            <p><strong>⏰ 開放時間：</strong>週二至週日 09:00–17:00（週一休館）</p>
+            <p><strong>🎫 參觀方式：</strong>免費入園，提供團體預約導覽</p>
+            <p><strong>📚 主題內容：</strong>民主教育、憲政史料、國會制度、議政空間展示</p>
+            <p><strong>🌐 官網：</strong><a href="https://daap.ly.gov.tw/" target="_blank">點此前往</a></p>
+        </div>
+
+        <h3>地圖預覽</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.6822949566701!2d120.6970876888124!3d24.05346224391869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693bb67d0b43fb%3A0xb42b1de0821cd571!2z56uL5rOV6Zmi5rCR5Li76K2w5pS_5ZyS5Y2AKOiHuueBo-ecgeitsOacg-e0gOW_teWckuWNgCk!5e0!3m2!1szh-TW!2stw!4v1765005740524!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+    <div id="food-3" class="detail-content">
+            <br>
+            <div class="detail-category">
+            <h2>霧峰農會酒莊</h2>
+            <h1>　</h1>
+            <p>📍 特色伴手禮 | 在地釀造</p>
+            </div>
+
+            <img src="Website Materials/Image/food03 酒莊.jfif" alt="霧峰農會酒莊" class="detail-image">
+            <div class="detail-text">
+                <h3>酒莊介紹</h3>
+                <p>霧峰農會酒莊以在地香米釀造的初霧、香米酒等產品聞名全台。酒莊結合了傳統釀酒工藝與現代科技，使用霧峰在地種植的優質香米，釀造出口感香醇、風味獨特的米酒系列產品。</p>
+                <p>酒莊提供導覽與品酒體驗服務，讓遊客可以深入了解米酒的釀造過程，並親自品嚐各式產品。來到霧峰，不妨帶一瓶在地佳釀作為伴手禮，品味霧峰的土地風味。</p>
+                <h3>參觀資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區中正路345號</p>
+                    <p><strong>⏰ 營業時間：</strong>週一至週日 08:00-17:00</p>
+                    <p><strong>📞 導覽預約：</strong>可電話預約團體導覽</p>
+                    <p><strong>🅿️ 停車資訊：</strong>設有停車場</p>
+                    <p><strong>🌐 詳細介紹：</strong><a href="https://www.twwfsake.com/" target="_blank">點此前往</a></p>
+                </div>
+
+                <h3>特色產品</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🍶 初霧：</strong>清爽順口、香氣迷人</div>
+                    <div class="lineup-item"><strong>🍚 香米酒：</strong>米香濃郁、回甘甘甜</div>
+                    <div class="lineup-item"><strong>🍑 荔枝酒：</strong>果香四溢、酸甜適中</div>
+                    <div class="lineup-item"><strong>🌸 梅酒：</strong>清新爽口、解膩開胃</div>
+                    <div class="lineup-item"><strong>🍳 料理米酒：</strong>烹飪專用、提升風味</div>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.78693595944!2d120.69037417590337!3d24.03857747765096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b23c679f41f%3A0x5503d6cbe313a56b!2z6Zyn5bOw6L6y5pyD6YWS6I6K!5e0!3m2!1szh-TW!2stw!4v1765007704571!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <h3>注意事項</h3>
+                <div class="info-card">
+                    <p>⚠️ 飲酒過量有害健康，未成年請勿飲酒</p>
+                    <p>🚗 開車不喝酒，喝酒不開車</p>
+                </div>
+            </div>
+        </div>
+        <div id="attraction-7" class="detail-content">
+    <br>
+    <div class="detail-category">
+        <h2>霧峰戰俘營紀念碑</h2>
+        <h1>　</h1>
+        <p>📍 歷史記憶地景 | 二戰戰俘營址</p>
+    </div>
+
+    <img src="https://dcm.s3.hicloud.net.tw/new/e_upload/excel/place/2019-05-14/8c081ce1-04c4-4bd9-96c8-1e39307a3655/85d429b0-5f2c-4313-97e7-afa55d67daec.jpg" alt="霧峰戰俘營紀念碑" class="detail-image">
+
+    <div class="detail-text">
+        <h3>景點介紹</h3>
+        <p>
+            霧峰戰俘營紀念碑原址為第二次世界大戰期間的「台中戰俘營」，是日軍在臺設立的多處戰俘營之一。
+            當時多名盟軍戰俘被押送至此，在困苦環境下從事農作、建設與重勞動，留下許多戰時歷史痕跡與人道故事。
+        </p>
+        <p>
+            今日的紀念碑紀錄了戰俘的姓名、原籍國與營區位置，為了悼念在此受難的受俘士兵，以及提醒後人戰爭的殘酷與和平的重要性。
+            周邊環境安靜莊重，是一處兼具教育意義與人文價值的歷史地景，也是霧峰地區少數保存完整、能見證二戰歷史的場所。
+        </p>
+
+        <h3>參觀資訊</h3>
+        <div class="info-card">
+            <p><strong>📍 地址：</strong>台中市霧峰區林森路與民主路交叉口附近</p>
+            <p><strong>⏰ 開放時間：</strong>全天開放（戶外景點）</p>
+            <p><strong>📝 特色：</strong>二戰史蹟、戰俘名錄碑、和平教育意義</p>
+            <p><strong>📚 歷史背景資訊來源：</strong>文化部文化資產網</p>
+            <p><strong>🌐 詳細介紹：</strong><a href="https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=150086" target="_blank">點此前往</a></p>
+        </div>
+
+        <h3>地圖預覽</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.3621527580885!2d120.67818888560325!3d24.018291122988803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693aec01cc6dab%3A0x562044dc32368035!2z5Y-w5Lit5oiw5L-Y54ef57SA5b-156KR!5e0!3m2!1szh-TW!2stw!4v1765006759369!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<div id="attraction-8" class="detail-content">
+    <br>
+    <div class="detail-category">
+        <h2>阿罩霧公園</h2>
+        <h1>　</h1>
+        <p>📍 親子公園 | 落羽松秘境</p>
+    </div>
+
+    <img src="https://www.taichung.gov.tw/media/832726/%E6%88%B0%E9%BC%93%E8%A1%A8%E6%BC%94%E7%82%BA%E6%B4%BB%E5%8B%95%E6%8F%AD%E9%96%8B%E5%BA%8F%E5%B9%95.jpg" alt="阿罩霧公園" class="detail-image">
+
+    <div class="detail-text">
+        <h3>景點介紹</h3>
+        <p>
+            阿罩霧公園位在霧峰市區要道旁，是結合休憩、遊憩與展演機能的親子公園。園內設置大型機器人花燈、
+            貓頭鷹意象裝置、手壓式汲水器、拱橋與大片草地，不論白天或夜晚都有不同風情。夜間燈光點亮後，
+            機器人花燈與拱橋燈帶營造出浪漫又帶點童趣的氛圍，非常適合散步拍照。
+        </p>
+        <p>
+            公園內規劃兒童遊戲區、白沙坑、溜滑梯、鞦韆、蹺蹺板與體健設施等，讓大小朋友都能找到適合自己的遊戲空間。
+            一側還有展演舞台與觀眾座椅，後方則是被稱為「落羽松祕境」的林蔭步道，到了秋冬轉色季節，
+            金黃與橘紅的落羽松倒映在綠地之中，是霧峰區相當熱門的散步與拍照景點。
+        </p>
+
+        <h3>參觀資訊</h3>
+        <div class="info-card">
+            <p><strong>📍 地址：</strong>台中市霧峰區成功路287號（民生路與成功路交叉口）</p>
+            <p><strong>⏰ 開放時間：</strong>全天開放（戶外公園，設施使用時間依現場公告為主）</p>
+            <p><strong>👨‍👩‍👧‍👦 適合族群：</strong>親子家庭、情侶散步、在地居民休憩</p>
+            <p><strong>✨ 特色：</strong>機器人花燈、白沙坑、兒童遊戲設施、展演舞台、大草地與落羽松景觀</p>
+        </div>
+
+        <h3>地圖預覽</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.5898864467188!2d120.70067978448739!3d24.05997303651933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b458ff06a47%3A0xda2516c375bd1718!2z5Y-w5Lit5biC6Zyn5bOw5Y2A6Zi_572p6Zyn5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1765007490767!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<div id="attraction-9" class="detail-content">
+    <br>
+    <div class="detail-category">
+        <h2>菇類產學文化館</h2>
+        <h1>　</h1>
+        <p>📍 農業教育 | 蘑菇產業展示</p>
+    </div>
+
+    <img src="https://www.wffa.org.tw/images/images/25a49e3dc8d55e1e8ba0e78d662dfdf0.jpg" alt="菇類產學文化館" class="detail-image">
+
+    <div class="detail-text">
+        <h3>景點介紹</h3>
+        <p>
+            菇類產學文化館由霧峰農會規劃設立，結合在地菇類產業、教學示範與科普展示，
+            是全台少數以「食用菇」為主題的專業教育場館。館內以互動式展區介紹菇類的生態、
+            栽培方式與產業應用，讓參觀者能以淺顯方式認識菇類從培養、孢子發展到生產的完整流程。
+            透過專業講解，可深入了解霧峰作為重要農業產區的特色與技術發展。
+        </p>
+
+        <p>
+            場館同時設置示範栽培室、精品菇展示區與菇類加工產品展示，讓遊客能實際看見不同品種
+            的菇類生長樣貌，並了解其營養價值與經濟用途。周邊亦規劃體驗活動與教學課程，
+            適合親子、學生團體與對農業科普有興趣的民眾參訪，是霧峰地區推廣智慧農業與食農教育的重要場所。
+        </p>
+
+        <h3>參觀資訊</h3>
+        <div class="info-card">
+            <p><strong>📍 地址：</strong>台中市霧峰區（霧峰農會附近）</p>
+            <p><strong>⏰ 開放時間：</strong>依農會公告為主，可接受團體預約參訪</p>
+            <p><strong>👨‍🏫 適合對象：</strong>親子家庭、學校團體、食農教育課程</p>
+            <p><strong>✨ 亮點特色：</strong>菇類展示區、示範栽培室、加工產品展示、食農教育課程</p>
+            <p><strong>🌐 詳細介紹：</strong><a href="https://www.wffa.org.tw/attractions.php" target="_blank">點此前往</a></p>
+        </div>
+
+        <h3>地圖預覽</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.040773018131!2d120.69548757590412!3d24.064868676629985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b5ae13387fb%3A0xc71c48efdc0e7aeb!2z6Zyn5bOw6I-H6aGe55Si5a246aSoIFd1ZmVuZyBNdXNocm9vbSBNdXNldW0!5e0!3m2!1szh-TW!2stw!4v1765008014256!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+
+</div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 霧峰旅遊宣傳網 | Wufeng Travel Promotion Website</p>
+            <p>探索霧峰・感受文化・品味生活</p>
+            <p>本網站圖片皆取自google</p>
+            <button class="back-to-top" id="backToTop">↑</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

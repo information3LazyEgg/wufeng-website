@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樂遊活動 | 霧峰旅遊宣傳網</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Website Materials/Image/logo.png" alt="霧峰旅遊 Logo" class="logo">
+                <span class="site-title">霧峰旅遊宣傳網</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">主頁</a></li>
+                <li><a href="about.html">網站介紹</a></li>
+                <li><a href="attractions.html">景點導覽</a></li>
+                <li><a href="activities.html" class="active">樂遊活動</a></li>
+                <li><a href="food.html">美食推薦</a></li>
+                <li><a href="timeline.html">時光走廊</a></li>
+                <li><a href="powerpoint.html">簡報欣賞</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 頁面標題 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>樂遊活動</h1>
+            <p>Activities & Events</p>
+        </div>
+    </section>
+
+    <!-- 活動列表 -->
+    <section class="content-section">
+        <div class="container">
+            <!-- 活動介紹橫幅 -->
+            <div class="event-banner">
+                <img src="Website Materials/Image/Activity.jpg" alt="迴遊阿罩霧活動">
+            </div>
+
+            <div class="event-intro">
+                <h2>迴遊阿罩霧 光榮再臨系列活動</h2>
+                <p>
+                    臺中市霧峰地區為早期省政府時期之重要發展據點，其人文歷史及藝術資源豐富，經歷地方及中央的積極溝通及協調，113年11月28日由交通部公告將霧峰部分地區納入參山國家風景區管理處管轄區域，並推動霧峰區觀光旅遊資源的全面發展。
+                </p>
+                <p>
+                    為了推展在地觀光，將在接下來的114年1月帶來「迴遊阿罩霧 光榮再臨系列活動」，誠摯邀請在地居民以及對霧峰地區觀光旅遊有興趣的民眾一同共襄盛舉，活動內容多元豐富，包含探索味蕾的草地餐酒會、深入在地導覽的自行車騎旅活動、精彩陣容的草地音樂會，希望可以讓參與的民眾對霧峰地區有進一步的認識。
+                </p>
+            </div>
+
+            <div class="items-grid">
+                <!-- 活動 1 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/參山醉霧．風味饗宴.jpg" alt="參山醉霧．風味饗宴">
+                    </div>
+                    <div class="item-content">
+                        <h3>參山醉霧．風味饗宴</h3>
+                        <p class="item-date">2025年1月4日（星期六）</p>
+                        <p class="item-description" data-read-more="80">
+                            2025今年第一場的音樂會就在「參山醉霧・風味饗宴」！精彩的音樂表演、特色酒飲，搭配上美味可口的餐食，這樣讓人Chill到微醺的活動還不趕快找朋友一起來體驗這場在地的盛宴。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('activity-1')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 活動 2 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/阿罩霧自行車騎旅活動.jpg" alt="阿罩霧自行車騎旅活動">
+                    </div>
+                    <div class="item-content">
+                        <h3>阿罩霧自行車騎旅活動</h3>
+                        <p class="item-date">2025年1月5日、1月11日</p>
+                        <p class="item-description" data-read-more="80">
+                            由霧峰觀光大使「陳永進」老師領騎導覽，深度走訪多重面向的霧峰之美，遊程輕鬆愜意，慢活深呼吸，帶領你暢遊霧峰最美的18公里。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('activity-2')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 活動 3 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/草地音樂會.jpg" alt="草地音樂會">
+                    </div>
+                    <div class="item-content">
+                        <h3>草地音樂會</h3>
+                        <p class="item-date">2025年1月18日（星期六）下午2時至6時</p>
+                        <p class="item-description" data-read-more="80">
+                            邀請美聲天后-許景淳、霧峰在地出身歌手-戴梅君、阿卡貝拉團隊-Just Vocal Band、YOYO家族的大哥哥、大姊姊、偶像男孩-洪暐哲，壓軸還有霧峰在地的標誌性音樂團體國立臺灣交響樂團演出，演繹出霧峰懷舊情懷的曲目，精彩的演出不容錯過。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('activity-3')">了解更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 彈窗 -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeDetailModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 詳細資訊內容（隱藏） -->
+    <div id="activity-details" style="display: none;">
+        <div id="activity-1" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>參山醉霧．風味饗宴</h2>
+                <h1>　</h1>
+                <p>📍 2025年1月4日（星期六</p>
+            </div>
+            <img src="Website Materials/Image/參山醉霧．風味饗宴.jpg" alt="參山醉霧．風味饗宴" class="detail-image">
+            <div class="detail-text">
+                <h3>活動介紹</h3>
+                <p>2025今年第一場的音樂會就在「參山醉霧・風味饗宴」！這是一場結合音樂、美酒與美食的精緻饗宴，讓您在優美的環境中，享受一場視覺、聽覺與味覺的完美盛宴。</p>
+                <p>活動現場將提供精彩的音樂表演、特色酒飲，搭配上美味可口的餐食，營造出讓人 Chill 到微醺的愜意氛圍。無論是與好友相聚，或是與家人共度美好時光，這都是一個絕佳的選擇。</p>
+
+                <h3>活動詳情</h3>
+                <div class="info-card">
+                    <p><strong>📅 活動日期：</strong>2025年1月4日（星期六）</p>
+                    <p><strong>📍 活動地點：</strong>議蘆會館咖啡廳（台中市霧峰區中正路734號民主議政園區內）</p>
+                    <p><strong>⏰ 報名時間：</strong>113年12月14日上午10時開放報名</p>
+                    <p><strong>✨ 活動特色：</strong>精彩音樂表演、特色酒飲品嚐、美味餐食、微醺氛圍</p>
+                </div>
+
+                <h3>注意事項</h3>
+                <div class="info-card">
+                    <p>• 請提前報名，以確保您的參與名額</p>
+                    <p>• 飲酒過量有害健康，未成年請勿飲酒</p>
+                    <p>• 活動現場禁止吸菸</p>
+                    <p>• 如遇天候不佳，主辦單位保有活動調整之權利</p>
+                </div>
+            </div>
+        </div>
+        <div id="activity-2" class="detail-content">
+    <br>
+    <div class="detail-category">
+        <h2>阿罩霧自行車騎旅活動</h2>
+        <h1>　</h1>
+        <p>📍 9–11月｜立法院民主議政園區民主草坪出發</p>
+    </div>
+
+    <!-- 圖片檔名可依你實際素材調整 -->
+    <img src="Website Materials/Image/阿罩霧自行車騎旅活動.jpg" alt="阿罩霧自行車騎旅活動" class="detail-image">
+
+    <div class="detail-text">
+        <h3>活動介紹</h3>
+        <p>
+            想用「15公里的速度」好好認識霧峰嗎？交通部觀光署參山國家風景區管理處推出的
+            「阿罩霧自行車騎旅活動」，以單車慢行的方式，帶著民眾從歷史、文化到自然景觀，
+            深度感受這座文化小鎮的魅力。活動特別邀請單車網紅「伊娃Eva」、「小D」，以及霧峰觀光大使
+            陳永進老師一同領騎，讓參加者一邊騎乘、一邊聽在地故事，體驗不一樣的霧峰風景。
+        </p>
+
+        <h3>騎乘路線與梯次規劃</h3>
+        <div class="info-card">
+            <p>
+                本次「參山騎旅－阿罩霧自行車騎旅活動」共規劃 <strong>8 個場次</strong>，
+                於每年 <strong>9 月至 11 月</strong> 分梯次舉辦，全部從
+                <strong>台中市立法院民主議政園區民主草坪</strong> 出發。
+            </p>
+            <p>
+                一般場次規劃 <strong>10K 休閒組</strong> 與 <strong>26K 挑戰組</strong>，
+                由陳永進老師帶領，適合想輕鬆騎乘、同時聽導覽認識霧峰的民眾。
+            </p>
+            <p>
+                另外還有兩場加強版路線：
+            </p>
+            <p style="margin-left: 1.5rem;">
+                • <strong>26K 一線天挑戰組：</strong>由單車網紅「小D」領騎，適合喜歡挑戰自我的車友<br>
+                • <strong>26K 鳥嘴潭探索組：</strong>由「伊娃Eva」率隊，帶領大家探訪鳥嘴潭等秘境景點
+            </p>
+            <p>
+                路線沿途串聯 <strong>亞洲大學現代美術館、鳥嘴潭水庫、阿罩霧圳水梯、民生故事館、霧峰農會酒莊、
+                921 地震教育園區、霧峰林家宮保第園區</strong> 等景點，在補給站休息之餘，也能欣賞沿線人文與自然景觀。
+            </p>
+        </div>
+
+        <h3>報名方式與活動亮點</h3>
+        <div class="info-card">
+            <p>
+                活動<strong>報名完全免費</strong>，各場次名額有限，需事先於指定報名系統（伊貝特網站）線上報名，額滿為止。
+            </p>
+            <p>
+                只要完成全程騎乘，即可獲得價值超過新台幣 <strong>300 元</strong> 的
+                「霧峰特色伴手禮」，內容包括在地米捲、荔枝凍等精選小點，還有機會抽中台中住宿券等好禮。
+            </p>
+            <p>
+                本活動也結合參山處年度單車活動「參大王」集章認證，沿線設置多個集章景點，只要掃描
+                <strong>3 個以上 QR Code</strong>，即可兌換參山 <strong>100 元消費券</strong>；
+                若再上傳完整騎乘軌跡圖，還能加碼參加萬元好禮抽獎。
+            </p>
+            <p>
+                透過單車、集章與在地伴手禮，讓旅程不只是打卡拍照，而是一次真正與土地連結的慢旅行。
+            </p>
+        </div>
+
+        <h3>永續旅遊小提醒</h3>
+        <div class="info-card">
+            <p>• 歡迎多利用大眾運輸或共乘前往集合地點，響應低碳旅遊。</p>
+            <p>• 建議自備環保水壺、餐具與輕食點心，減少一次性垃圾。</p>
+            <p>• 活動全程為戶外騎乘，請留意防曬、補水與個人安全，並遵從領騎人員指示。</p>
+        </div>
+    </div>
+</div>
+
+        <div id="activity-3" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>草地音樂會</h2>
+                <h1>　</h1>
+                <p>📍 2025年1月18日（星期六）下午2時至6時</p>
+            </div>
+            <img src="Website Materials/Image/草地音樂會.jpg" alt="草地音樂會" class="detail-image">
+            <div class="detail-text">
+                <h3>活動介紹</h3>
+                <p>這是一場匯聚眾多知名藝人與音樂團體的盛大草地音樂會，邀請了美聲天后許景淳、霧峰在地出身歌手戴梅君、阿卡貝拉團隊 Just Vocal Band、YOYO家族的大哥哥大姊姊、偶像男孩洪暐哲，壓軸還有霧峰在地的標誌性音樂團體國立臺灣交響樂團演出。</p>
+                <p>音樂會將演繹出霧峰懷舊情懷的曲目，結合現代與傳統，為觀眾帶來一場精彩絕倫的音樂饗宴。現場也與霧峰在地協會及農會合作，邀請在地特色產業與觀光圈業者展示販售產品與美食，滿足現場民眾聽覺、視覺、味覺的全方位享受。</p>
+
+                <h3>演出陣容</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🎤 美聲天后：</strong>許景淳</div>
+                    <div class="lineup-item"><strong>🎵 在地歌手：</strong>戴梅君</div>
+                    <div class="lineup-item"><strong>🎶 阿卡貝拉：</strong>Just Vocal Band</div>
+                    <div class="lineup-item"><strong>👨‍👩‍👧‍👦 親子同樂：</strong>YOYO家族</div>
+                    <div class="lineup-item"><strong>⭐ 偶像男孩：</strong>洪暐哲</div>
+                    <div class="lineup-item"><strong>🎻 壓軸演出：</strong>國立臺灣交響樂團</div>
+                </div>
+
+                <h3>活動詳情</h3>
+                <div class="info-card">
+                    <p><strong>📅 活動日期：</strong>2025年1月18日（星期六）</p>
+                    <p><strong>⏰ 活動時間：</strong>下午2時至6時</p>
+                    <p><strong>📍 活動地點：</strong>立法院民主議政園區民主草坪</p>
+                    <p><strong>🎫 入場方式：</strong>免費入場，自由入座</p>
+                    <p><strong>🍜 特色攤位：</strong>霧峰在地特色產業、美食攤位、農特產品展售</p>
+                </div>
+
+                <h3>注意事項</h3>
+                <div class="info-card">
+                    <p>• 建議攜帶野餐墊或折疊椅</p>
+                    <p>• 現場提供美食攤位，也歡迎自備輕食</p>
+                    <p>• 請共同維護場地整潔</p>
+                    <p>• 如遇天候不佳，主辦單位保有活動調整之權利</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 霧峰旅遊宣傳網 | Wufeng Travel Promotion Website</p>
+            <p>探索霧峰・感受文化・品味生活</p>
+            <p>本網站圖片皆取自google</p>
+            <button class="back-to-top" id="backToTop">↑</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

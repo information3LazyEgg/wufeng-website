@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食推薦 | 霧峰旅遊宣傳網</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Website Materials/Image/logo.png" alt="霧峰旅遊 Logo" class="logo">
+                <span class="site-title">霧峰旅遊宣傳網</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">主頁</a></li>
+                <li><a href="about.html">網站介紹</a></li>
+                <li><a href="attractions.html">景點導覽</a></li>
+                <li><a href="activities.html">樂遊活動</a></li>
+                <li><a href="food.html" class="active">美食推薦</a></li>
+                <li><a href="timeline.html">時光走廊</a></li>
+                <li><a href="powerpoint.html">簡報欣賞</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 頁面標題 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>美食推薦</h1>
+            <p>Local Food & Cuisine</p>
+        </div>
+    </section>
+
+    <!-- 美食列表 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="items-grid">
+                <!-- 美食項目 1：肉圓婆 -->
+                <div class="item-card featured">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/food.jpg" alt="肉圓婆">
+                    </div>
+                    <div class="item-content">
+                        <h3>肉圓婆</h3>
+                        <p class="item-date">傳統小吃 | 超過60年歷史</p>
+                        <p class="item-description" data-read-more="80">
+                            位在霧峰市場裡、民主街老街上的「肉圓婆」，是一家擁有超過 60 年歷史的老字號傳統小吃店。這裡的肉圓香氣濃郁、皮Q彈牙、內餡飽滿，每一口都能嚐出手工傳承的古早味。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-1')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 美食項目 2：木瓜牛乳大王 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="Website Materials/Image/food02 木瓜牛奶.jpg" alt="霧峰木瓜牛乳大王">
+                    </div>
+                    <div class="item-content">
+                        <h3>霧峰木瓜牛乳大王</h3>
+                        <p class="item-date">飲品 | 在地老店</p>
+                        <p class="item-description" data-read-more="80">
+                            霧峰的經典飲品店，以新鮮木瓜與香濃牛奶調製而成的木瓜牛奶最為有名。夏日來一杯冰涼的木瓜牛奶，是許多在地人從小喝到大的回憶。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-2')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 美食項目 3：霧峰爌肉飯 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://cdn2.ettoday.net/images/8154/d8154876.jpg" alt="霧峰爌肉飯">
+                    </div>
+                    <div class="item-content">
+                        <h3>霧峰爌肉飯</h3>
+                        <p class="item-date">傳統飯食 | 在地30多年老店</p>
+                        <p class="item-description" data-read-more="80">
+                            在霧峰中正路上的老字號「霧峰爌肉飯」，以份量飽滿、價格親民聞名。大塊爌肉幾乎蓋滿白飯，搭配滷汁與配菜，是許多在地人上班、上學前最熟悉的早午餐選擇。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-3')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 美食項目 4：霧峰蛋餅之家 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://fruitlovelife.com/wp-content/uploads/2022/07/293344858_7966407753399379_5707607575308718013_n.jpg" alt="霧峰蛋餅之家">
+                    </div>
+                    <div class="item-content">
+                        <h3>霧峰蛋餅之家</h3>
+                        <p class="item-date">早餐 | 手工蛋餅老店</p>
+                        <p class="item-description" data-read-more="80">
+                            開業逾三十年的「霧峰蛋餅之家」，以純手工製作的蛋餅皮聞名。餅皮軟嫩帶有淡淡麵香，煎到微微焦黃，淋上自製蒜頭醬油，是不少霧峰人早晨必吃的味道。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-4')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 美食項目 5：窩草的日子 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNqzuswDLRb8tfCqxYkL_yTZIUSVfSIHkrqczqK=w600-h800" alt="窩草的日子">
+                    </div>
+                    <div class="item-content">
+                        <h3>窩草的日子</h3>
+                        <p class="item-date">景觀餐廳 | 庭院草地・親子友善</p>
+                        <p class="item-description" data-read-more="80">
+                            「窩草的日子」是一間結合大草坪與庭院景觀的餐廳，提供義大利麵、漢堡、輕食與甜點，能一邊用餐、一邊欣賞戶外綠地，非常適合親子、朋友聚會與情侶約會。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-5')">了解更多</button>
+                    </div>
+                </div>
+
+                <!-- 美食項目 6：米米港式小吃 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://picdn.gomaji.com/uploads/stores/203/132203/224727/IMG_0165-%E6%8B%B7%E8%B2%9D.jpg" alt="米米港式小吃">
+                    </div>
+                    <div class="item-content">
+                        <h3>米米港式小吃</h3>
+                        <p class="item-date">港式小吃 | 近亞洲大學</p>
+                        <p class="item-description" data-read-more="80">
+                            隱身學區巷弄中的「米米港式小吃」，由香港老闆掌廚，主打道地車仔麵、雲吞撈麵、蜜汁叉燒飯與雞蛋仔等港式小點，是學生族群口耳相傳的平價港味據點。
+                        </p>
+                        <button class="btn btn-small btn-primary" onclick="openDetailModal('food-6')">了解更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 彈窗 -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeDetailModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- 詳細資訊內容（隱藏） -->
+    <div id="food-details" style="display: none;">
+        <!-- food-1：肉圓婆 -->
+        <div id="food-1" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>肉圓婆</h2>
+                <h1>　</h1>
+                <p>📍 傳統小吃 | 超過60年歷史</p>
+            </div>
+
+            <img src="Website Materials/Image/food.jpg" alt="肉圓婆" class="detail-image">
+            <div class="detail-text">
+                <h3>店家介紹</h3>
+                <p>位在霧峰市場裡、民主街老街上的「肉圓婆」，是一家擁有超過 60 年歷史的老字號傳統小吃店。這裡的肉圓香氣濃郁、皮Q彈牙、內餡飽滿，每一口都能嚐出手工傳承的古早味。它不只是霧峰人的共同回憶，更是許多觀光客來到霧峰「必吃」的在地代表，就連節目《食尚玩家》也曾特別來採訪報導！</p>
+                <p>如果你在 Google 搜尋「霧峰必吃肉圓」，跑出來的第一名幾乎都是「肉圓婆」——足見它的高人氣與在地地位。菜單單純明瞭，主食只有肉圓一項，其他皆是湯品配餐，讓人毫無選擇障礙，只需專心享受這份傳統的好味道。</p>
+
+                <h3>地點與交通資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區民主街（霧峰市場附近）</p>
+                    <p><strong>⏰ 營業時間：</strong>早上至下午（售完為止）</p>
+                    <p><strong>🚗 交通方式：</strong></p>
+                    <p style="margin-left: 1.5rem;">• 開車可沿民生路、民主街周邊尋找路邊停車位</p>
+                    <p style="margin-left: 1.5rem;">• 步行可結合霧峰市場、林家花園等景點順遊</p>
+                </div>
+
+                <h3>推薦餐點</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🥟 招牌肉圓：</strong>皮Q彈牙、內餡飽滿、香氣濃郁</div>
+                    <div class="lineup-item"><strong>🍲 四神湯：</strong>傳統古早味、暖心暖胃</div>
+                    <div class="lineup-item"><strong>🥣 味噌湯：</strong>清爽解膩、搭配肉圓最佳</div>
+                </div>
+
+                <div class="food-highlight">
+                    <h4>在地小語</h4>
+                    <p>霧峰不只是歷史文化的寶庫，更藏著讓人懷念的味道。「肉圓婆」這碗肉圓，包的不只是肉與筍，更是霧峰人幾十年的情感與回憶。來霧峰走走，別忘了來這裡嚐一口時光的味道。</p>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.9927395181976!2d120.69527688561142!3d24.06656022103111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b5a7373d275%3A0x425ebedb7a2e229c!2z6IKJ5ZyT5amG!5e0!3m2!1szh-TW!2stw!4v1765010694541!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+        </div>
+
+        <!-- food-2：霧峰木瓜牛乳大王 -->
+        <div id="food-2" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>霧峰木瓜牛乳大王</h2>
+                <h1>　</h1>
+                <p>📍 飲品 | 在地老店</p>
+            </div>
+
+            <img src="Website Materials/Image/food02 木瓜牛奶.jpg" alt="霧峰木瓜牛乳大王" class="detail-image">
+            <div class="detail-text">
+                <h3>店家介紹</h3>
+                <p>霧峰木瓜牛乳大王是霧峰在地的經典飲品店，以新鮮木瓜與香濃牛奶調製而成的木瓜牛奶最為有名。每一杯都是現點現打，使用當季新鮮木瓜，搭配香濃的牛奶，口感綿密、香甜可口。</p>
+                <p>夏日來一杯冰涼的木瓜牛奶，是許多在地人從小喝到大的回憶。這裡不僅是霧峰人的共同記憶，也是外地遊客來到霧峰必訪的美食據點之一。</p>
+
+                <h3>店家資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區民主街（鄰近肉圓婆一帶）</p>
+                    <p><strong>⏰ 營業時間：</strong>每日營業（實際時間依店家公告為準）</p>
+                    <p><strong>✨ 特色：</strong>現點現打、新鮮水果搭配香濃牛奶</p>
+                </div>
+
+                <h3>推薦飲品</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🥤 招牌木瓜牛奶：</strong>綿密香甜、新鮮現打</div>
+                    <div class="lineup-item"><strong>🍹 木瓜汁：</strong>清爽解渴、原汁原味</div>
+                    <div class="lineup-item"><strong>🧃 綜合果汁：</strong>多種水果搭配、營養滿分</div>
+                    <div class="lineup-item"><strong>🍋 檸檬汁：</strong>酸甜開胃、夏日必備</div>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.9928941256685!2d120.69741297590407!3d24.066554776564505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b5a724d744b%3A0x59d14997d704e6ab!2z6Zyn5bOw54mb5Lmz5aSn546L!5e0!3m2!1szh-TW!2stw!4v1765010415157!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- food-3：霧峰爌肉飯 -->
+        <div id="food-3" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>霧峰爌肉飯</h2>
+                <h1>　</h1>
+                <p>📍 傳統飯食 | 中正路在地老店</p>
+            </div>
+
+            <img src="https://cdn2.ettoday.net/images/8154/d8154876.jpg" alt="霧峰爌肉飯" class="detail-image">
+            <div class="detail-text">
+                <h3>店家介紹</h3>
+                <p>位於霧峰中正路上的「霧峰爌肉飯」，是當地經營逾三十年的老字號小吃店。主打爌肉飯、肉羹與各式便當，份量實在、價格親民，是不少學生族與上班族的日常用餐選擇。</p>
+                <p>招牌爌肉飯最大特色是幾乎蓋滿白飯的爌肉，加上滷汁與配菜，一碗就能吃得相當滿足。簡單的店面、人情味十足的用餐環境，加上實在的份量，讓它成為霧峰人心中的「家常滋味」。</p>
+
+            <h3>店家資訊</h3>
+            <div class="info-card">
+                <p><strong>📍 地址：</strong>台中市霧峰區中正路1158號</p>
+                <p><strong>⏰ 營業時間：</strong>06:30－13:30（週一、週日公休）</p>
+                <p><strong>🍽 招牌餐點：</strong>爌肉飯、肉羹飯、各式便當</p>
+            </div>
+
+            <h3>用餐小提醒</h3>
+            <div class="info-card">
+                <p>💡 建議避開尖峰用餐時間，以免久候</p>
+                <p>💡 可將這裡作為拜訪霧峰林家花園、民主議政園區前後的順路用餐點</p>
+            </div>
+            <h3>地圖預覽</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.8764876396813!2d120.69710707590407!3d24.070653676405197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b59cdaa9c47%3A0xd6fcf0da339b9db5!2z6Zyn5bOw54iM6IKJ6aOv!5e0!3m2!1szh-TW!2stw!4v1765010748747!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- food-4：霧峰蛋餅之家 -->
+        <div id="food-4" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>霧峰蛋餅之家</h2>
+                <h1>　</h1>
+                <p>📍 早餐 | 手工蛋餅30多年老店</p>
+            </div>
+
+            <img src="https://fruitlovelife.com/wp-content/uploads/2022/07/293344858_7966407753399379_5707607575308718013_n.jpg" alt="霧峰蛋餅之家" class="detail-image">
+            <div class="detail-text">
+                <h3>店家介紹</h3>
+                <p>「霧峰蛋餅之家」是位於霧峰樹仁商圈中的在地早餐老店，開業已逾三十年。最大的特色是純手工自製蛋餅皮，老闆親自調和粉漿、烘烤，再撒上黑芝麻，作為各種口味蛋餅的基底。</p>
+                <p>煎至微微焦黃的蛋餅，餅皮軟嫩帶有淡淡麵粉香，搭配店家自製的蒜頭醬油，不論是原味、起司或是加入其他配料，都相當涮嘴。許多在地居民從求學時期就一路吃到出社會，是標準「從小吃到大的霧峰味」。</p>
+
+                <h3>店家資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區育仁街36號</p>
+                    <p><strong>⏰ 營業時間：</strong>06:00－11:00（每日營業，公休日依店家公告）</p>
+                    <p><strong>📞 電話：</strong>04-2339-0773</p>
+                    <p><strong>🅿️ 停車方式：</strong>周邊路邊停車</p>
+                </div>
+
+                <h3>推薦餐點</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🥚 手工蛋餅：</strong>餅皮軟嫩，撒上黑芝麻，口感香氣兼具</div>
+                    <div class="lineup-item"><strong>🧀 起司蛋餅：</strong>奶香與蛋餅的完美結合</div>
+                    <div class="lineup-item"><strong>🥤 紅豆紫米雜糧粥：</strong>熬煮軟爛、不加糖，養生又有飽足感</div>
+                    <div class="lineup-item"><strong>☕ 飲品系列：</strong>搭配蛋餅的奶茶、豆漿等簡單卻耐喝</div>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.079449226554!2d120.69461077590394!3d24.063506576682844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b5b2d10091f%3A0x56bb429d3a0add3d!2z6Zyn5bOw6JuL6aSF5LmL5a62!5e0!3m2!1szh-TW!2stw!4v1765010791717!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- food-5：窩草的日子 -->
+        <div id="food-5" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>窩草的日子</h2>
+                <h1>　</h1>
+                <p>📍 景觀餐廳 | 草地庭院・親子寵物友善</p>
+            </div>
+
+            <img src="https://lh5.googleusercontent.com/p/AF1QipNqzuswDLRb8tfCqxYkL_yTZIUSVfSIHkrqczqK=w600-h800" alt="窩草的日子" class="detail-image">
+            <div class="detail-text">
+                <h3>餐廳介紹</h3>
+                <p>「窩草的日子」是一間結合大片綠地草坪與庭院景觀的餐廳，位於霧峰四德路巷弄內，環境幽靜、綠意盎然。戶外草地搭配樹木與燈串，白天、夜晚各有不同氛圍，是霧峰地區頗具人氣的景觀餐廳之一。</p>
+                <p>餐點提供義大利麵、手作漢堡、輕食與甜點等選擇，也有飲品與咖啡可搭配。戶外空間寬敞，很適合親子家庭帶小朋友放風，也歡迎毛小孩入園（需遵守不落地等相關規範）。不少人也會選擇在此包場舉辦生日派對、求婚或小型婚禮。</p>
+
+                <h3>店家資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區四德路136巷23號</p>
+                    <p><strong>⏰ 營業時間：</strong>約 11:30－20:30（週一公休，實際以店家公告為主）</p>
+                    <p><strong>📞 電話：</strong>04-2339-0125</p>
+                    <p><strong>🅿️ 停車資訊：</strong>提供停車場</p>
+                    <p><strong>💰 消費方式：</strong>每人低消（金額依現場或最新公告為主）</p>
+                </div>
+
+                <h3>特色亮點</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🌿 大草坪庭院：</strong>適合親子、朋友與毛小孩同樂</div>
+                    <div class="lineup-item"><strong>🍝 餐點選擇多樣：</strong>義大利麵、漢堡、輕食、甜點一應俱全</div>
+                    <div class="lineup-item"><strong>🎉 場地租借：</strong>可包場舉辦派對、慶生、抓周或求婚等活動</div>
+                    <div class="lineup-item"><strong>📷 拍照打卡點：</strong>戶外草地與燈串夜景，是熱門拍照背景</div>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.948258081604!2d120.69159947590431!3d24.068126576503435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693ba218837a93%3A0xd0f94ddc37e3ae9b!2z56qp6I2J55qE5pel5a2Q!5e0!3m2!1szh-TW!2stw!4v1765010822045!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- food-6：米米港式小吃 -->
+        <div id="food-6" class="detail-content">
+            <br>
+            <div class="detail-category">
+                <h2>米米港式小吃</h2>
+                <h1>　</h1>
+                <p>📍 港式料理 | 近亞洲大學學區</p>
+            </div>
+
+            <img src="https://picdn.gomaji.com/uploads/stores/203/132203/224727/IMG_0165-%E6%8B%B7%E8%B2%9D.jpg" alt="米米港式小吃" class="detail-image">
+            <div class="detail-text">
+                <h3>店家介紹</h3>
+                <p>「米米港式小吃」隱身在霧峰學區巷弄中，由來自香港的老闆主理，曾在香港經營茶餐廳多年，將道地港式風味帶到霧峰。雖然店面不大，卻有濃濃港式街頭小店的氛圍。</p>
+                <p>店內主打懷舊車仔麵、鮮蝦豬肉雲吞撈麵、蜜汁叉燒飯、滷水雞翼等港式經典小吃，價位多落在百元上下，對學生族與小資族來說相當親民。想在霧峰品嚐港式風味，這裡是不錯的選擇。</p>
+
+                <h3>店家資訊</h3>
+                <div class="info-card">
+                    <p><strong>📍 地址：</strong>台中市霧峰區柳豐三街25號（近亞洲大學）</p>
+                    <p><strong>⏰ 營業時間：</strong>週一至週六 11:00－20:00（週日公休，其他公休依店家公告為主）</p>
+                    <p><strong>📞 電話：</strong>04-2330-8614</p>
+                </div>
+
+                <h3>推薦餐點</h3>
+                <div class="info-card">
+                    <div class="lineup-item"><strong>🍜 車仔麵：</strong>可自由搭配多種配料的經典港式小吃</div>
+                    <div class="lineup-item"><strong>🥟 雲吞撈麵：</strong>鮮蝦豬肉雲吞，彈牙有嚼勁</div>
+                    <div class="lineup-item"><strong>🍚 蜜汁叉燒飯：</strong>帶有甜香的叉燒配上白飯，份量實在</div>
+                    <div class="lineup-item"><strong>🍗 滷水雞翼：</strong>港式風味濃郁，鹹香下飯</div>
+                    <div class="lineup-item"><strong>🧇 雞蛋仔或甜點：</strong>濃濃香港街頭點心風情</div>
+                </div>
+                <h3>地圖預覽</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.647789622931!2d120.68526067590355!3d24.043482377460677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b17f325c73f%3A0x180d86aaae56e542!2z57Gz57Gz5riv5byP5bCP5ZCDfOi7iuS7lOm6tXzpm57om4vku5R86Jyc5rGB5Y-J54eSfOe0sOiTiembsuWQnnzmu7fmsLTpm57nv7x85rKZ5Zey54mb6IKJ!5e0!3m2!1szh-TW!2stw!4v1765010865217!5m2!1szh-TW!2stw" width="792" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 霧峰旅遊宣傳網 | Wufeng Travel Promotion Website</p>
+            <p>探索霧峰・感受文化・品味生活</p>
+            <p>本網站圖片皆取自google</p>
+            <button class="back-to-top" id="backToTop">↑</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
