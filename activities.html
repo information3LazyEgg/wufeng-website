@@ -8,28 +8,7 @@
 </head>
 <body>
     <!-- 導覽列 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="Website Materials/Image/logo.png" alt="霧峰旅遊 Logo" class="logo">
-                <span class="site-title">霧峰旅遊宣傳網</span>
-            </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">主頁</a></li>
-                <li><a href="about.html">網站介紹</a></li>
-                <li><a href="attractions.html">景點導覽</a></li>
-                <li><a href="activities.html" class="active">樂遊活動</a></li>
-                <li><a href="food.html">美食推薦</a></li>
-                <li><a href="timeline.html">時光走廊</a></li>
-                <li><a href="powerpoint.html">簡報欣賞</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="site-header"></div>
 
     <!-- 頁面標題 -->
     <section class="page-header">
@@ -84,7 +63,7 @@
                         <p class="item-description" data-read-more="80">
                             由霧峰觀光大使「陳永進」老師領騎導覽，深度走訪多重面向的霧峰之美，遊程輕鬆愜意，慢活深呼吸，帶領你暢遊霧峰最美的18公里。
                         </p>
-                        <button class="btn btn-small btn-primary" onclick="openDetailModal('activity-2')">了解更多</button>
+                        <button class="btn btn-small btn-disabled" disabled>已額滿</button>
                     </div>
                 </div>
 
@@ -117,12 +96,8 @@
     <!-- 詳細資訊內容（隱藏） -->
     <div id="activity-details" style="display: none;">
         <div id="activity-1" class="detail-content">
-            <br>
-            <div class="detail-category">
-                <h2>參山醉霧．風味饗宴</h2>
-                <h1>　</h1>
-                <p>📍 2025年1月4日（星期六</p>
-            </div>
+            <h2>參山醉霧．風味饗宴</h2>
+            <p class="detail-category">2025年1月4日（星期六）</p>
             <img src="Website Materials/Image/參山醉霧．風味饗宴.jpg" alt="參山醉霧．風味饗宴" class="detail-image">
             <div class="detail-text">
                 <h3>活動介紹</h3>
@@ -146,85 +121,9 @@
                 </div>
             </div>
         </div>
-        <div id="activity-2" class="detail-content">
-    <br>
-    <div class="detail-category">
-        <h2>阿罩霧自行車騎旅活動</h2>
-        <h1>　</h1>
-        <p>📍 9–11月｜立法院民主議政園區民主草坪出發</p>
-    </div>
-
-    <!-- 圖片檔名可依你實際素材調整 -->
-    <img src="Website Materials/Image/阿罩霧自行車騎旅活動.jpg" alt="阿罩霧自行車騎旅活動" class="detail-image">
-
-    <div class="detail-text">
-        <h3>活動介紹</h3>
-        <p>
-            想用「15公里的速度」好好認識霧峰嗎？交通部觀光署參山國家風景區管理處推出的
-            「阿罩霧自行車騎旅活動」，以單車慢行的方式，帶著民眾從歷史、文化到自然景觀，
-            深度感受這座文化小鎮的魅力。活動特別邀請單車網紅「伊娃Eva」、「小D」，以及霧峰觀光大使
-            陳永進老師一同領騎，讓參加者一邊騎乘、一邊聽在地故事，體驗不一樣的霧峰風景。
-        </p>
-
-        <h3>騎乘路線與梯次規劃</h3>
-        <div class="info-card">
-            <p>
-                本次「參山騎旅－阿罩霧自行車騎旅活動」共規劃 <strong>8 個場次</strong>，
-                於每年 <strong>9 月至 11 月</strong> 分梯次舉辦，全部從
-                <strong>台中市立法院民主議政園區民主草坪</strong> 出發。
-            </p>
-            <p>
-                一般場次規劃 <strong>10K 休閒組</strong> 與 <strong>26K 挑戰組</strong>，
-                由陳永進老師帶領，適合想輕鬆騎乘、同時聽導覽認識霧峰的民眾。
-            </p>
-            <p>
-                另外還有兩場加強版路線：
-            </p>
-            <p style="margin-left: 1.5rem;">
-                • <strong>26K 一線天挑戰組：</strong>由單車網紅「小D」領騎，適合喜歡挑戰自我的車友<br>
-                • <strong>26K 鳥嘴潭探索組：</strong>由「伊娃Eva」率隊，帶領大家探訪鳥嘴潭等秘境景點
-            </p>
-            <p>
-                路線沿途串聯 <strong>亞洲大學現代美術館、鳥嘴潭水庫、阿罩霧圳水梯、民生故事館、霧峰農會酒莊、
-                921 地震教育園區、霧峰林家宮保第園區</strong> 等景點，在補給站休息之餘，也能欣賞沿線人文與自然景觀。
-            </p>
-        </div>
-
-        <h3>報名方式與活動亮點</h3>
-        <div class="info-card">
-            <p>
-                活動<strong>報名完全免費</strong>，各場次名額有限，需事先於指定報名系統（伊貝特網站）線上報名，額滿為止。
-            </p>
-            <p>
-                只要完成全程騎乘，即可獲得價值超過新台幣 <strong>300 元</strong> 的
-                「霧峰特色伴手禮」，內容包括在地米捲、荔枝凍等精選小點，還有機會抽中台中住宿券等好禮。
-            </p>
-            <p>
-                本活動也結合參山處年度單車活動「參大王」集章認證，沿線設置多個集章景點，只要掃描
-                <strong>3 個以上 QR Code</strong>，即可兌換參山 <strong>100 元消費券</strong>；
-                若再上傳完整騎乘軌跡圖，還能加碼參加萬元好禮抽獎。
-            </p>
-            <p>
-                透過單車、集章與在地伴手禮，讓旅程不只是打卡拍照，而是一次真正與土地連結的慢旅行。
-            </p>
-        </div>
-
-        <h3>永續旅遊小提醒</h3>
-        <div class="info-card">
-            <p>• 歡迎多利用大眾運輸或共乘前往集合地點，響應低碳旅遊。</p>
-            <p>• 建議自備環保水壺、餐具與輕食點心，減少一次性垃圾。</p>
-            <p>• 活動全程為戶外騎乘，請留意防曬、補水與個人安全，並遵從領騎人員指示。</p>
-        </div>
-    </div>
-</div>
-
         <div id="activity-3" class="detail-content">
-            <br>
-            <div class="detail-category">
-                <h2>草地音樂會</h2>
-                <h1>　</h1>
-                <p>📍 2025年1月18日（星期六）下午2時至6時</p>
-            </div>
+            <h2>草地音樂會</h2>
+            <p class="detail-category">2025年1月18日（星期六）下午2時至6時</p>
             <img src="Website Materials/Image/草地音樂會.jpg" alt="草地音樂會" class="detail-image">
             <div class="detail-text">
                 <h3>活動介紹</h3>
@@ -262,15 +161,8 @@
     </div>
 
     <!-- 頁尾 -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 霧峰旅遊宣傳網 | Wufeng Travel Promotion Website</p>
-            <p>探索霧峰・感受文化・品味生活</p>
-            <p>本網站圖片皆取自google</p>
-            <button class="back-to-top" id="backToTop">↑</button>
-        </div>
-    </footer>
-
+    <div id="site-footer"></div>
+    <script src="js/includes.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
