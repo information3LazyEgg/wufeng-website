@@ -688,8 +688,8 @@ function extractOpenAIText(data) {
 }
 
 function extractDetailContext(detailContent, pageType) {
-    const titleEl = detailContent.querySelector('h2');
-    const metaEl = detailContent.querySelector('.detail-category p');
+    const titleEl = detailContent.querySelector('h1, h2');
+    const metaEl = detailContent.querySelector('.detail-category2 p, .detail-category p');
     const summaryEl = detailContent.querySelector('.detail-text p');
 
     return {
