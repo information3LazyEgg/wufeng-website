@@ -23,6 +23,11 @@ function initNavbar() {
         return;
     }
 
+    function closeNavMenu() {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+    }
+
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
@@ -31,16 +36,14 @@ function initNavbar() {
     navMenu.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+                window.setTimeout(closeNavMenu, 0);
             }
         });
     });
 
     document.addEventListener('click', function(event) {
         if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            closeNavMenu();
         }
     });
 }
